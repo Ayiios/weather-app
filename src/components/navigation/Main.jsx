@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from '../views/Home';
 import About from '../views/About';
+import WeatherDetails from "../WeatherDetails";
 
 
 
@@ -12,6 +13,8 @@ const Main = () => {
        
        <Route exact path="/" element={<Home/>}/>
        <Route path="/about" element={<About/>}/>
+       <Route path="/weather/:location" element={<WeatherDetails/>}/>
+ 
 
     </Routes>)
 
