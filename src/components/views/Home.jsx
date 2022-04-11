@@ -1,9 +1,6 @@
 import { useState } from "react"
-
 import useFetch from "../hooks/useFetch";
 import Search from "../Search";
-
-
 import WeatherCard from "../WeatherCard";
 
 
