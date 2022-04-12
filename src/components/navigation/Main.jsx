@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from '../views/Home';
 import About from '../views/About';
 import WeatherDetails from "../WeatherDetails";
+import '../../styles/RouterStyles.css';
 
 
 

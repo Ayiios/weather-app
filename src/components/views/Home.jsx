@@ -32,12 +32,12 @@ const Home = () => {
 
 
     return(
-        <div className="home">
+        <div className="app">
             
         <Search callback={Searching}/>
         {loading && <h1>Laddar..</h1> } 
-        {error && <h1>Hittades ingen sökning</h1>} 
-        <h3>Text i min home</h3>
+        {error && <p className="error">Hittades ingen sökning</p>} 
+       
         {data && <WeatherCard items={data} />}
         </div>
     )
