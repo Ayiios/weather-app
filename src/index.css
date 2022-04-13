@@ -142,3 +142,7 @@ a:active { text-decoration: none;
 .app .error{
   text-align: center;
 }
+
+.temp{
+  display: block;
+}

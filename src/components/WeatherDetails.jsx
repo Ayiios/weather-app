@@ -27,6 +27,17 @@ const WeatherDetails = () => {
     const{data, loading, error} = useFetch(url);
 
 
+    var GetDay = (items) => {
+
+
+        let date = new Date(items);
+        let day = date.toLocaleString('sv-SE', {weekday: 'long'});
+
+        return(day)
+
+    }
+
+
     return(<div className="app">
      <Search callback={Searching}/>
     <div className="weather-card">
@@ -40,11 +51,27 @@ const WeatherDetails = () => {
        <div className="location"> 
            <h1>{data.location.name}</h1>
            </div>}
-           <div className="temp">
-    <p>{data.current.temp_c} °C </p>
+           <div className="temp">    
+           <p><img src={data.forecast.forecastday[0].day.condition.icon} alt="symbol" /> Nu { data.current.temp_c } °C</p>
+           <p><img src={data.forecast.forecastday[0].day.condition.icon} alt="symbol" />
+    {GetDay(data.forecast.forecastday[0].date) + ": "+ data.forecast.forecastday[0].day.avgtemp_c + 
+    "°C: Lägst: " + data.forecast.forecastday[0].day.mintemp_c + 
+    "°C Högst: " + data.forecast.forecastday[0].day.maxtemp_c + " °C"}</p>
+
+    <p>
+    <img src={data.forecast.forecastday[1].day.condition.icon} alt="symbol" />
+     {GetDay(data.forecast.forecastday[1].date) +": "+ data.forecast.forecastday[1].day.avgtemp_c + 
+      "°C: Lägst: " + data.forecast.forecastday[1].day.mintemp_c +
+      "°C Högst: " + data.forecast.forecastday[1].day.maxtemp_c + " °C"} </p>
+     <p>
+    <img src={data.forecast.forecastday[2].day.condition.icon} alt="symbol" />
+     {GetDay(data.forecast.forecastday[2].date)   +": "+ data.forecast.forecastday[2].day.avgtemp_c + 
+      "°C: Lägst: " + data.forecast.forecastday[2].day.mintemp_c + 
+     "°C Högst: " + data.forecast.forecastday[2].day.maxtemp_c + " °C"} </p> 
+          
     </div>
-     <p>Datum: {data.forecast.forecastday[0].date}</p>
-      <img src={data.current.condition.icon} alt="symbol" />
+    
+     
 
 
             
