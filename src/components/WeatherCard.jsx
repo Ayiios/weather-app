@@ -1,9 +1,21 @@
+
 import { NavLink } from "react-router-dom";
 
 const WeatherCard = ({items}) => {
 
+
+
+
+  
   
 
+
+  let date = new Date(items.forecast.forecastday[0].date);
+  let day = date.toLocaleString('sv-SE', {weekday: 'long'});
+console.log(day);
+
+
+  
 
     return(<div className="weather-card">
 
@@ -14,7 +26,7 @@ const WeatherCard = ({items}) => {
      <div className="temp">
     <p>{items.current.temp_c }  °C </p>
     </div>
-     <p>Datum:{items.forecast.forecastday[0].date}</p>
+     <p>{ day+ ": " + items.forecast.forecastday[0].date}</p>
       <img src={items.current.condition.icon} alt="symbol" />
       </NavLink>
     
