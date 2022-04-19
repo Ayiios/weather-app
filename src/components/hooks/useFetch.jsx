@@ -9,6 +9,9 @@ const useFetch = (url) => {
     
 
     useEffect(() => {
+
+        //AbortController gör så att den inte fetchar i bakgrunden ifall den
+        //Av någon anledning avbryts
        const abortCont = new AbortController();
 
        

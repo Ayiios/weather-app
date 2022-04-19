@@ -20,6 +20,7 @@ const Home = () => {
     console.log(error);
     console.log(data);
 
+    //Denna metod sätter state location av sök värdet.
     const Searching = (searchparam) => {
      
         

@@ -26,7 +26,7 @@ const WeatherDetails = () => {
 
     const{data, loading, error} = useFetch(url);
 
-
+    //Denna metod räknar ut vilken dag det är.
     var GetDay = (items) => {
 
 
