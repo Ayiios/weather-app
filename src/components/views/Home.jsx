@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 import Search from "../Search";
 import WeatherCard from "../WeatherCard";
 
-
+//Min home vy som sidan startar på. Här visas inte alla detaljer för staden utan man måste klicka på kortet för det.
 const Home = () => {
 
     const[location, setLocation] = useState("stockholm");

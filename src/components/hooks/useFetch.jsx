@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+//Denna hook har jag gjort för att kunna använda sökningar mot apiet i hela applikationen och inte behöva upprepa det.
 const useFetch = (url) => {
     const[data, setData] = useState("");
     const[error, setError] = useState(null);

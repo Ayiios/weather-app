@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-
+//Denna vy visar det man har sökt på startsidan, startvärdet är stockholm
 const WeatherCard = ({items}) => {
 
 
@@ -24,7 +24,7 @@ console.log(day);
      <h1>{items.location.name}</h1>
      </div>
      <div className="temp">
-    <p>{items.current.temp_c }  °C </p>
+    <p>Nu: {items.current.temp_c }  °C </p>
     </div>
      <p>{ day+ ": " + items.forecast.forecastday[0].date}</p>
       <img src={items.current.condition.icon} alt="symbol" />

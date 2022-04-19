@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import useFetch from "./hooks/useFetch"
 import Search from "./Search"
 
-
+//Denna vy visar detaljerad info om vädret i en stad, man kommer hit genom navigering från home vyn.
 const WeatherDetails = () => {
 
     const {location}= useParams()
